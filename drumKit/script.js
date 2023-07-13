@@ -1,15 +1,15 @@
 const buttons = document.querySelector('.buttons');
 
 const sounds = {
-  A: new Audio('boom.wav'),
-  S: new Audio('clap.wav'),
-  D: new Audio('hihat.wav'),
-  F: new Audio('kick.wav'),
-  G: new Audio('openhat.wav'),
-  H: new Audio('ride.wav'),
-  J: new Audio('snare.wav'),
-  K: new Audio('tink.wav'),
-  L: new Audio('tom.wav'),
+  A: new Audio('sounds/boom.wav'),
+  S: new Audio('sounds/clap.wav'),
+  D: new Audio('sounds/hihat.wav'),
+  F: new Audio('sounds/kick.wav'),
+  G: new Audio('sounds/openhat.wav'),
+  H: new Audio('sounds/ride.wav'),
+  J: new Audio('sounds/snare.wav'),
+  K: new Audio('sounds/tink.wav'),
+  L: new Audio('sounds/tom.wav'),
 }
 
 const playDrum = (key)=>{
