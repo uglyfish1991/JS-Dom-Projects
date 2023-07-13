@@ -1,7 +1,8 @@
 //----------------------------------Variables-----------------------------------------//
 
 const buttons = document.querySelector('.buttons');
-const volume = document.getElementById("volume")
+const volume = document.getElementById("innerVol");
+
 const sounds = {
   a: new Audio('sounds/boom.wav'),
   s: new Audio('sounds/clap.wav'),
@@ -35,16 +36,17 @@ const hightlightButton = (key)=>{
   }
 
 function move(){
-const myInterval = setInterval(raiseVolume, 15)
-let value = 0
+  
+const myInterval = setInterval(raiseVolume, 10)
+let widthPercent = 0
 function raiseVolume(){
-  console.log(volume.value);
-  if (value == "14"){
+  if (widthPercent == "100"){
     clearInterval(myInterval);
-    volume.value = "0";
+    volume.style.width = "0%";
   } else {
-    value++;
-    volume.value = value;
+    widthPercent+=5;
+    console.log(widthPercent)
+    volume.style.width = widthPercent + "%"
   }
 }}
 
