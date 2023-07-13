@@ -1,0 +1,30 @@
+
+:root {
+    --mainAccent: #1e90ff;
+    --white: #ffffff;
+  }
+
+body{
+    background-color: var(--white);
+}
+
+.buttons{
+    margin: 0 auto;
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+button{
+    width: 350px;
+}
+button:active{
+    width: 350px;
+    background-color: pink;
+}
+
+
+.clicked{
+    background-color: pink;
+}
+

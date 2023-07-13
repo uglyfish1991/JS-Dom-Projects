@@ -1,3 +1,5 @@
+
+
 const buttons = document.querySelector('.buttons');
 
 const sounds = {
@@ -18,10 +20,22 @@ const playDrum = (key)=>{
   }
 }
 
-document.addEventListener('keydown', (e)=>{
-  playDrum(e.key.toUpperCase());
+const hightlightButton = (key)=>{
+    if (key){
+        document.getElementById(key).style.backgroundColor="red"
+    }
+}
+
+document.addEventListener('keydown', (event)=>{
+  playDrum(event.key.toUpperCase());
+  hightlightButton(event.key.toUpperCase());
 });
 
 buttons.addEventListener('click',(event)=>{
     playDrum(event.target.id)
+    hightlightButton(event.target.id)
+    // event.target.classList.add("clicked")
+    // setTimeout(()=>{
+    //     event.target.classList.remove("clicked")}, 800
+    // )
 })
