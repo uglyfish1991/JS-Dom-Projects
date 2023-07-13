@@ -18,10 +18,7 @@ body{
 button{
     width: 350px;
 }
-button:active{
-    width: 350px;
-    background-color: pink;
-}
+
 
 
 .clicked{

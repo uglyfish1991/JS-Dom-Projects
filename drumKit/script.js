@@ -1,4 +1,4 @@
-
+//----------------------------------Variables-----------------------------------------//
 
 const buttons = document.querySelector('.buttons');
 
@@ -14,6 +14,8 @@ const sounds = {
   L: new Audio('sounds/tom.wav'),
 }
 
+//----------------------------------Functions-----------------------------------------//
+
 const playDrum = (key)=>{
   if (key in sounds){
     sounds[key].play();
@@ -22,9 +24,16 @@ const playDrum = (key)=>{
 
 const hightlightButton = (key)=>{
     if (key){
-        document.getElementById(key).style.backgroundColor="red"
+        let div = document.getElementById(key)
+        div.classList.add('clicked')
+
+        setTimeout(()=>{
+            div.classList.remove('clicked')
+        }, 400)
     }
 }
+
+//----------------------------------Event Listeners-----------------------------------------//
 
 document.addEventListener('keydown', (event)=>{
   playDrum(event.key.toUpperCase());
@@ -34,8 +43,4 @@ document.addEventListener('keydown', (event)=>{
 buttons.addEventListener('click',(event)=>{
     playDrum(event.target.id)
     hightlightButton(event.target.id)
-    // event.target.classList.add("clicked")
-    // setTimeout(()=>{
-    //     event.target.classList.remove("clicked")}, 800
-    // )
 })
