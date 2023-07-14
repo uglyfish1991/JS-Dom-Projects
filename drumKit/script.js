@@ -53,9 +53,6 @@ function showVolume(key) {
     if (widthPercent == "100") {
       // stop the count up
       clearInterval(volUp);
-      // I don't like this being nested refactor and call elsewhere maybe?
-      // not very readable at all
-
       // if the bar got to 100 see if the track is long
       if (sounds[key].duration > 0.8) {
         // if so do a reverse width - speed based on length of track THIS WON'T WORK, BUT GET OVER IT
