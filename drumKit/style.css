@@ -49,7 +49,7 @@ button{
 
 .pad{
     /* background-color: var(--darkBG); */
-    background-color: black;
+    background-color: rgb(23, 23, 23);
     box-shadow: 1px 12px 8px grey;
     display: flex;
     min-height: 50vh;
@@ -61,18 +61,20 @@ button{
 
 .controls{
     background-color: rgb(83, 0, 0);
+    box-shadow: 2px 2px 4px black;
     flex-basis: 30%;
     padding: 20px;
 }
 
 #outerVol{
-    width:85%;
+    width:25vw;
     background-color: black;
     height: 3px;
 }
 
 #innerVol{
-    background: linear-gradient(90deg, rgba(37,255,0,1) 0%, rgba(255,241,0,1) 82%, rgba(255,0,0,1) 100%);
+    background: linear-gradient(90deg, rgba(37,255,0,1) 0%, rgba(255,241,0,1) 82%, rgba(255,0,0,1));
+    background-size: 25vw;
     position: relative;
     top: 0px;
     height: 3px;
